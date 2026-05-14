@@ -1,0 +1,16 @@
+function navTo(sectionId) {
+    const section = document.getElementById(sectionId)
+    if(section) {
+        section.scrollIntoView({ behavior: 'smooth' })
+    }
+}
+
+window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav')
+
+    if(window.scrollY > 0) {
+        nav.classList.add('scroll')
+    } else {
+        nav.classList.remove('scroll')
+    }
+}) 
