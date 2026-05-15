@@ -14,30 +14,32 @@ window.addEventListener('scroll', () => {
         nav.classList.remove('scroll')
     }
 
-const cards = document.querySelectorAll('#s2 .card')
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if(entry.isIntersecting) {
-            cards.forEach((card, index) => {
-                setTimeout(() => {
-                    card.classList.add('visible')
-                }, index * 200)
-            });
-        } else {
-            cards.forEach(card => {
-                card.classList.remove('visible')
-            });
-        }
-    })  
-}, { threshold: 0.2 })
-
-observer.observe(document.querySelector('#s2')) 
-
-
 
 
 })
+
+
+
+
+// Observer para animar os cards — criado fora do listener de scroll
+const cards = document.querySelectorAll('#s2 .card')
+const container = document.querySelector('#s2')
+
+if(container && cards.length) {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                cards.forEach((card, index) => {
+                    setTimeout(() => card.classList.add('visible'), index * 200)
+                })
+            } else {
+                cards.forEach(card => card.classList.remove('visible'))
+            }
+        })
+    }, { threshold: 0.2 })
+
+    observer.observe(container)
+}
 
 
 

@@ -145,7 +145,7 @@ h2{
 
 #s1 {
     
-    background-image: url("../assets/imagens/teamobebeeeeeeeeeeeeeeeee.png");
+    background-image: url("../assets/imagens/bgS1.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -159,6 +159,12 @@ h2{
     justify-content: center;
     flex-wrap: wrap;
     gap: 50px;
+}
+
+#s2{
+    background-image: url("../assets/imagens/Landing\ Page.png");
+    background-size: cover;
+    background-position: center;
 }
 
 .card{
@@ -196,10 +202,19 @@ h2{
     position: relative;
     min-height: 100vh;
     padding: 80px 0;
-    background-image: url("../assets/imagens/Landing\ Page\ \(5\).png");
+    background-image: url("../assets/imagens/Landing\ Page\ \(1\).png");
     background-size: cover;
     background-position: center;
 }
+
+.card {
+    background-color: white;
+    border-radius: 20px;
+    border-color: #ff477e;
+    text-align: center;
+}
+
+
 
 
 
@@ -209,7 +224,7 @@ h2{
     }
 
     #s1 {
-        background-image: url('../assets/images/bgmobile.jpg');
+        background-image: url('../assets/imagens/bgS1.png');
         padding-top: 120px;
         padding-bottom: 80px;
     }
